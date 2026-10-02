@@ -32,6 +32,7 @@
     .experience p:not(.eyebrow){font-size:14px;line-height:2.3;margin-bottom:25px}
     .experience .button{padding:20px 31px;min-width:325px}
     .floating-cta{bottom:128px}
+    .main-nav{gap:22px;font-size:10px;letter-spacing:.08em}.hero h1,.intro h2,.section-heading h2,.reason-copy h2,.teacher-heading h2,.voice-heading h2,.news h2,.experience h2,.access h2,.course-info h3,.teacher-card h3,.location h3{font-family:var(--sans);font-weight:600;letter-spacing:.06em}.hero h1{font-weight:500}.six-courses{grid-template-columns:repeat(3,1fr)}.six-courses .course-card{grid-template-columns:48% 52%;min-height:270px}.six-courses .course-info{padding:25px 22px}.six-courses .course-info h3{font-size:22px;line-height:1.45;margin:13px 0}.six-courses .course-info p{font-size:11px;line-height:1.8}.group-colors{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:28px;font-size:10px;color:var(--muted)}.group-colors span{margin-right:8px;color:var(--ink)}.group-colors b{padding:6px 11px;font-weight:500}.cherry{background:#f2c9d2}.grape{background:#ddd2ef}.strawberry{background:#e9b7b2}.prepiano-blue{background:#cfe6f0}.prepiano-green{background:#cfe3cf}.student-voices{background:#f7f4ee}.voice-heading{display:flex;justify-content:space-between;align-items:end;margin-top:35px}.voice-heading h2{font-size:36px;line-height:1.55;margin:12px 0 0}.voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:42px}.voice-grid article{padding:32px;border-top:1px solid var(--sage);background:#fbfaf7}.voice-grid span{font-size:10px;color:var(--sage);letter-spacing:.08em}.voice-grid p{font-size:15px;line-height:2;margin:22px 0 0}
     @media (min-width:768px) and (max-width:1024px){
       .site-header{height:78px;padding:0 4vw;gap:3vw}.main-nav{gap:20px}.header-cta{padding:11px 15px;margin-left:8px}
       .hero{min-height:570px;grid-template-columns:45% 55%}.hero-copy{padding:110px 6vw 70px}.hero h1{font-size:42px}.hero-image{min-height:570px;margin:14px 2vw 14px 0}
@@ -63,17 +64,66 @@
       .hero-image{min-height:430px;height:430px;margin:0 5vw 5vw}
       .hero-note{right:8vw;bottom:38px}
     }
+    .group-guide{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;margin-top:52px}.group-age{display:flex;flex-direction:column;gap:16px}.group-age h3{text-align:center;font:600 24px var(--sans);margin:0;padding-bottom:18px;border-bottom:1px solid var(--line)}.group-age b{display:flex;align-items:center;justify-content:center;min-height:82px;padding:12px 10px;border-radius:18px;font:600 16px var(--sans);text-align:center;color:#202525}.group-age small{font-size:11px;font-weight:500}.group-detail{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:52px;padding:26px 32px;border:1px solid var(--line);border-radius:12px;background:#fbfaf7;color:var(--muted);font-size:12px}.group-detail strong{width:100%;color:var(--sage);font-size:16px}.group-detail span{white-space:nowrap}.cherry{background:#e8a1b4!important}.grape{background:#a98cba!important}.strawberry{background:#d96767!important}.prepiano-blue{background:#8fc5d7!important}.prepiano-green{background:#8ca687!important}
+    @media (max-width:1024px){.group-guide{gap:12px}.group-age h3{font-size:20px}.group-age b{font-size:13px;min-height:70px}}
+    @media (max-width:767px){.group-guide{grid-template-columns:repeat(2,1fr);gap:18px}.group-age h3{font-size:19px}.group-age b{border-radius:12px}.group-detail{padding:20px;gap:12px 16px}}
+    .six-courses{gap:22px}.six-courses .course-card{display:block;min-height:270px;border-radius:24px!important;overflow:hidden!important;background:#e8a1b4!important;position:relative}.six-courses .course-card:after{display:none}.six-courses .course-image{display:none}.six-courses .course-info{height:100%;min-height:270px;background:transparent!important;padding:30px 34px;display:flex;flex-direction:column;align-items:flex-start}.six-courses .course-number{color:#53635f;font-size:12px;font-weight:600}.six-courses .course-info h3{font-size:27px;margin:28px 0 10px;line-height:1.35}.six-courses .course-info p{font-size:14px;color:#5e6b67;margin-top:0;line-height:1.8}.six-courses .circle-arrow{display:none}.six-courses .course-card:nth-child(2){background:#e7dfd1!important}.six-courses .course-card:nth-child(3){background:#82b1c2!important}.six-courses .course-card:nth-child(4){background:#dce6e1!important}.six-courses .course-card:nth-child(5){background:#f1ddd7!important}.six-courses .course-card:nth-child(6){background:#e8e2d8!important}.six-courses .course-card:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(32,37,37,.08)}.group-guide,.group-detail{display:none}
+    /* Improve contrast for course detail text on colored cards */
+    .six-courses .course-info p{color:#26332f!important;font-weight:500}
+    .six-courses .course-number{color:#34443f!important}
+    .six-courses .circle-arrow{display:block;right:28px;bottom:24px;width:auto;height:auto;border:0;border-radius:0;line-height:1;color:#34443f;font-size:28px;font-weight:400}
+    .six-courses .circle-arrow{right:38px;bottom:34px;font-weight:300;transform:scale(.92)}
+    .site-header{position:sticky;top:0;z-index:20}
+    .brand-logo{width:132px;height:58px;display:flex;align-items:center}
+    .brand-logo img{display:block;width:100%;height:auto}
+    .footer .brand-logo{width:150px;height:auto}
+    @media(max-width:767px){.brand-logo{width:108px;height:50px}.footer .brand-logo{width:130px}}
+    .image-room,.intro-image{background-image:url('https://modepluspf.com/wp-content/uploads/2021/03/4388.jpg%E3%80%80%E3%83%A2%E3%83%BC%E3%83%89%E3%83%97%E3%83%A9%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6-scaled.jpg')}
+    .teacher-card .teacher-portrait{border-radius:0!important;filter:none!important;background-position:center;background-size:cover}
+    .teacher-card .teacher-portrait{overflow:hidden;clip-path:none!important}
+    .teacher-card .teacher-portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:0!important;transform:none!important}
+    .teacher-card .teacher-two img{object-fit:cover;object-position:center top}
+    .teacher-card .teacher-three img{object-position:center top;transform:translateY(-16px) scale(1.02)!important}
+    .teacher-card .teacher-one img{content:url('img/teacher-wada-fukiko.png');transform:none}
+    .teacher-card .teacher-two img{content:url('img/teacher-nagamoto-shiho.png')}
+    .teacher-card .teacher-three img{content:url('img/teacher-goto-aki.png');transform:none}
+    .teacher-one{background-image:url('img/teacher-wada-fukiko.png')!important}
+    .teacher-two{background-image:url('img/teacher-nagamoto-shiho.png')!important;background-color:#e8e7eb;background-size:145% auto!important;background-position:center center!important}
+    .teacher-three{background-image:url('img/teacher-goto-aki.png')!important}
+    .group-color-legend{margin-top:34px;padding:20px 24px;border:1px solid var(--line);background:#fbfaf7}
+    .group-color-legend p{margin:0 0 14px;color:var(--sage);font-size:12px;font-weight:600;letter-spacing:.08em}
+    .legend-items{display:flex;flex-wrap:wrap;gap:12px 24px;color:#4b5752;font-size:12px}
+    .legend-items span{display:inline-flex;align-items:center;gap:8px}
+    .legend-swatch{display:inline-block;width:14px;height:14px;border-radius:50%}
+    .group-color-legend .cherry{background:#e8a1b4!important}.group-color-legend .grape{background:#a98cba!important}.group-color-legend .strawberry{background:#d96767!important}.group-color-legend .prepiano-blue{background:#8fc5d7!important}.group-color-legend .prepiano-green{background:#8ca687!important}
+    .voice-grid-three{grid-template-columns:repeat(3,1fr);gap:0}
+    .voice-grid-three article{padding:0 20px 28px;border:1px solid var(--line);background:#fff}
+    .voice-photo{height:245px;margin:0 -20px 0;background-position:center;background-size:cover;background-repeat:no-repeat}
+    .voice-photo-01{background-image:url('img/voice-01.png')}.voice-photo-02{background-image:url('img/voice-02.png')}.voice-photo-03{background-image:url('img/voice-03.png')}
+    .voice-grid-three article>span{display:block;margin:0 -20px 25px;padding:10px 14px;text-align:center;background:#f0443f;color:#fff;font-size:14px;letter-spacing:.04em}
+    .voice-grid-three article p{font-size:18px;line-height:1.8;margin:0;color:var(--ink)}
+    .voice-grid .voice-photo{height:220px;margin:-32px -32px 24px}
+    .voice-grid article>span{display:block;margin:0 -32px 22px;padding:9px 14px;text-align:center;background:var(--sage);color:#fff;font-size:13px;letter-spacing:.04em}
+    .voice-grid article p{font-size:16px;line-height:1.9;margin:0;color:var(--ink)}
+    .voice-grid article{padding:0 0 30px;overflow:visible;border:0;background:transparent}
+    .voice-grid .voice-photo{height:270px;margin:0;background-position:center;background-size:cover}
+    .voice-grid article>span{position:relative;width:calc(100% - 36px);margin:-18px 18px 22px;padding:10px 14px;box-shadow:0 7px 16px rgba(32,37,37,.08)}
+    .voice-grid article p{padding:0 26px}
+    .voice-grid article:nth-child(2){margin-top:34px}
+    @media(max-width:767px){.voice-grid article:nth-child(2){margin-top:0}.voice-grid .voice-photo{height:230px}.voice-grid article p{padding:0 18px}}
+    @media(max-width:767px){.voice-grid-three{grid-template-columns:1fr;gap:20px}.voice-photo{height:220px}.voice-grid-three article p{font-size:15px}}
+    @media(max-width:767px){.group-color-legend{padding:18px}.legend-items{display:grid;gap:10px;font-size:11px}}
   </style>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="MODE PLUS MUSIC SCHOOL トップ">
-      <span class="brand-main">MODE PLUS</span><span class="brand-sub">MUSIC SCHOOL</span>
+    <a class="brand brand-logo" href="#top" aria-label="MODE PLUS MUSIC SCHOOL トップ">
+      <img src="img/logo_1-1.png" alt="MODE PLUS MUSIC SCHOOL">
     </a>
     <nav class="main-nav" aria-label="メインナビゲーション">
-      <a href="#about">About</a><a href="#courses">Courses</a><a href="#teachers">Teachers</a><a href="#access">Access</a>
+      <a href="#about">モードプラスについて</a><a href="#courses">コース案内</a><a href="#price">料金</a><a href="#teachers">講師紹介</a><a href="#access">教室・アクセス</a><a href="#news">お知らせ</a>
     </nav>
-    <a class="header-cta" href="#experience">体験レッスン <span>↗</span></a>
+    <a class="header-cta" href="https://modepluspf.resv.jp/reserve/calendar.php" target="_blank" rel="noopener">体験レッスン <span>↗</span></a>
   </header>
 
   <main id="top">
@@ -110,33 +160,43 @@
     </section>
 
     <section class="courses section" id="courses">
-      <div class="section-label">03 <span>COURSES</span></div>
-      <div class="section-heading"><div><p class="kicker">二つの入り口から、あなたの音楽へ。</p><h2>PIANO <i>/</i> VOCAL</h2></div><p class="heading-note">はじめての方も、もう一度始めたい方も。<br>目的に合わせてご案内します。</p></div>
-      <div class="course-grid">
-        <a class="course-card piano" href="#courses"><div class="course-image image-piano"></div><div class="course-info"><span class="course-number">01</span><h3>PIANO</h3><p>基礎から本格的な演奏まで。<br>子どもと大人のためのピアノレッスン。</p><span class="circle-arrow">↗</span></div></a>
-        <a class="course-card vocal" href="#courses"><div class="course-image image-vocal"></div><div class="course-info"><span class="course-number">02</span><h3>VOCAL</h3><p>声を知り、表現する。<br>日々の歌からクラシック声楽まで。</p><span class="circle-arrow">↗</span></div></a>
+      <div class="section-label">03 <span>COURSE NAVIGATION</span></div>
+      <div class="section-heading"><div><p class="kicker">6つの入口から、あなたの音楽へ。</p><h2>COURSES</h2></div><p class="heading-note">年齢や目的に合わせて、<br>自分に合うコースをお選びください。</p></div>
+      <div class="course-grid six-courses">
+        <a class="course-card course-group" href="#courses"><div class="course-image image-piano"></div><div class="course-info"><span class="course-number">01</span><h3>グループ</h3><p>1〜5歳の音楽体験。<br>年齢別のクラスをご案内します。</p><span class="circle-arrow">↗</span></div></a>
+        <a class="course-card" href="#courses"><div class="course-image image-piano"></div><div class="course-info"><span class="course-number">02</span><h3>子どもの<br>個人ピアノ</h3><p>4〜18歳。成長に合わせた個人レッスン。</p><span class="circle-arrow">↗</span></div></a>
+        <a class="course-card" href="#courses"><div class="course-image image-vocal"></div><div class="course-info"><span class="course-number">03</span><h3>子どもの<br>個人うた</h3><p>4〜18歳。声と表現を育てるレッスン。</p><span class="circle-arrow">↗</span></div></a>
+        <a class="course-card" href="#courses"><div class="course-image image-piano"></div><div class="course-info"><span class="course-number">04</span><h3>大人のピアノ</h3><p>18歳〜。はじめてから再開まで。</p><span class="circle-arrow">↗</span></div></a>
+        <a class="course-card" href="#courses"><div class="course-image image-vocal"></div><div class="course-info"><span class="course-number">05</span><h3>大人のうた</h3><p>18歳〜。目的に合わせた声のレッスン。</p><span class="circle-arrow">↗</span></div></a>
+        <a class="course-card" href="#courses"><div class="course-image image-piano"></div><div class="course-info"><span class="course-number">06</span><h3>受験対策</h3><p>ピアノ・うた・ソルフェージュ。</p><span class="circle-arrow">↗</span></div></a>
       </div>
-    </section>
-
-    <section class="age section">
-      <div class="section-label">04 <span>FIND YOUR COURSE</span></div>
-      <div class="section-heading"><div><p class="kicker">年齢から探す</p><h2>あなたに合う<br>コースを見つける。</h2></div><p class="heading-note">年齢や目的に合わせて、<br>選べるコースをご案内します。</p></div>
-      <div class="age-grid"><a href="#courses"><span>01</span><b>1–2歳</b><small>リトミック</small><i>↗</i></a><a href="#courses"><span>02</span><b>3歳</b><small>リトミック / プレピアノ</small><i>↗</i></a><a href="#courses"><span>03</span><b>4歳</b><small>プレピアノ / ピアノ</small><i>↗</i></a><a href="#courses"><span>04</span><b>5歳</b><small>リトミック / ピアノ</small><i>↗</i></a><a href="#courses"><span>05</span><b>小中高生</b><small>ピアノ / 歌</small><i>↗</i></a><a href="#courses"><span>06</span><b>大人</b><small>ピアノ / 歌</small><i>↗</i></a></div>
+      <div class="group-color-legend" aria-label="グループレッスンの色分け">
+        <p>グループレッスンのクラス</p>
+        <div class="legend-items">
+          <span><i class="legend-swatch cherry"></i>さくらんぼ親子（1歳）</span>
+          <span><i class="legend-swatch grape"></i>ぶどう親子（2歳）</span>
+          <span><i class="legend-swatch strawberry"></i>いちご（3〜5歳）</span>
+          <span><i class="legend-swatch prepiano-blue"></i>プレピアノ 年少・キッズボーカル</span>
+          <span><i class="legend-swatch prepiano-green"></i>プレピアノ 年中</span>
+        </div>
+      </div>
+      <div class="group-guide"><div class="group-age"><h3>1歳</h3><b class="cherry">さくらんぼ親子</b></div><div class="group-age"><h3>2歳</h3><b class="grape">ぶどう親子</b></div><div class="group-age"><h3>3歳</h3><b class="strawberry">いちご</b><b class="prepiano-blue">プレピアノ<br><small>年少</small></b></div><div class="group-age"><h3>4歳</h3><b class="strawberry">いちご</b><b class="prepiano-green">プレピアノ<br><small>年中</small></b></div><div class="group-age"><h3>5歳</h3><b class="strawberry">いちご</b><b class="prepiano-blue">キッズボーカル</b></div></div><div class="group-detail"><strong>各クラス詳細に掲載する内容</strong><span>対象となる生年月日</span><span>レッスン内容</span><span>開講曜日・教室</span><span>料金</span><span>担当講師</span><span>FAQ</span></div>
     </section>
 
     <section class="reasons section">
       <div class="reason-image image-room"></div><div class="reason-copy"><div class="section-label">05 <span>WHY MODE PLUS</span></div><p class="kicker">選ばれる理由</p><h2>音楽に向き合う時間を、<br>美しく、丁寧に。</h2><ul><li><b>01</b><span>専門性のある講師による、<br>一人ひとりに合わせた指導</span></li><li><b>02</b><span>40分のマンツーマンレッスン</span></li><li><b>03</b><span>グランドピアノと、整えられた教室空間</span></li><li><b>04</b><span>発表会や面談まで続く、長いサポート</span></li></ul></div>
     </section>
 
-    <section class="voices section" id="teachers"><div class="section-label">06 <span>TEACHERS</span></div><div class="teacher-heading"><div><p class="kicker">講師紹介</p><h2>音楽を学ぶ人に、<br>音楽を愛する人が寄り添う。</h2></div><a class="more-button" href="#teachers">MORE <span>↗</span></a></div><div class="teacher-grid"><article class="teacher-card"><div class="teacher-portrait teacher-one"></div><small>PIANO / DIRECTOR</small><h3>和田 蕗子</h3><p>代表・ピアノ</p></article><article class="teacher-card"><div class="teacher-portrait teacher-two"></div><small>PIANO / RHYTHMIC</small><h3>永本 志帆</h3><p>ピアノ・リトミック</p></article><article class="teacher-card"><div class="teacher-portrait teacher-three"></div><small>VOCAL</small><h3>後藤 亜季</h3><p>うた・リトミック</p></article></div></section>
+    <section class="voices section" id="teachers"><div class="section-label">06 <span>TEACHERS</span></div><div class="teacher-heading"><div><p class="kicker">講師紹介</p><h2>音楽を学ぶ人に、<br>音楽を愛する人が寄り添う。</h2></div><a class="more-button" href="#teachers">MORE <span>↗</span></a></div><div class="teacher-grid"><article class="teacher-card"><div class="teacher-portrait teacher-one"><img src="teacher-03.png" alt="和田 蕗子"></div><small>PIANO / DIRECTOR</small><h3>和田 蕗子</h3><p>代表・ピアノ</p></article><article class="teacher-card"><div class="teacher-portrait teacher-two"><img src="teacher-01.png" alt="永本 志帆"></div><small>PIANO / RHYTHMIC</small><h3>永本 志帆</h3><p>ピアノ・リトミック</p></article><article class="teacher-card"><div class="teacher-portrait teacher-three"><img src="teacher-02.png" alt="後藤 亜季"></div><small>VOCAL</small><h3>後藤 亜季</h3><p>うた・リトミック</p></article></div></section>
+    <section class="student-voices section" id="voices"><div class="section-label">07 <span>STUDENT VOICES</span></div><div class="voice-heading"><div><p class="kicker">生徒様の声</p><h2>音楽がある毎日を、<br>それぞれの場所から。</h2></div><a class="more-button" href="#voices">MORE <span>↗</span></a></div><div class="voice-grid"><article><div class="voice-photo voice-photo-01"></div><span>リトミック ぶどう親子クラス</span><p>音楽に合わせて体を動かすことに興味を持ち、家族の前で踊りを披露しています。（3歳）</p></article><article><div class="voice-photo voice-photo-02"></div><span>リトミック ぶどう親子クラス</span><p>歌や踊りが大好きになりました。音楽が聴こえるたびにノリノリです。（3歳）</p></article></div></section>
 
-    <section class="news section"><div class="section-label">07 <span>NEWS</span></div><div class="news-grid"><div><p class="kicker">お知らせ</p><h2>教室からのお知らせ</h2></div><div class="news-list"><a href="#news"><time>2026.09.01</time><span>秋の体験レッスンについて</span><b>↗</b></a><a href="#news"><time>2026.08.18</time><span>発表会・コンサートのお知らせ</span><b>↗</b></a><a href="#news"><time>2026.08.04</time><span>各教室の開講状況について</span><b>↗</b></a></div></div></section>
+    <section class="news section" id="news"><div class="section-label">08 <span>NEWS</span></div><div class="news-grid"><div><p class="kicker">お知らせ</p><h2>教室からのお知らせ</h2></div><div class="news-list"><a href="#news"><time>2026.09.01</time><span>秋の体験レッスンについて</span><b>↗</b></a><a href="#news"><time>2026.08.18</time><span>発表会・コンサートのお知らせ</span><b>↗</b></a><a href="#news"><time>2026.08.04</time><span>各教室の開講状況について</span><b>↗</b></a></div></div></section>
 
-    <section class="experience" id="experience"><div class="experience-inner"><p class="eyebrow">EXPERIENCE LESSON</p><h2>まずは、音楽のある時間を<br>体験してみませんか。</h2><p>レッスンのこと、教室のこと。<br>気になることからお聞かせください。</p><a class="button button-dark" href="#experience">体験レッスンを予約する <span>↗</span></a></div></section>
+    <section class="experience" id="experience"><div class="experience-inner"><p class="eyebrow">EXPERIENCE LESSON</p><h2>まずは、音楽のある時間を<br>体験してみませんか。</h2><p>レッスンのこと、教室のこと。<br>気になることからお聞かせください。</p><a class="button button-dark" href="https://modepluspf.resv.jp/reserve/calendar.php" target="_blank" rel="noopener">体験レッスンを予約する <span>↗</span></a></div></section>
 
     <section class="access section" id="access"><div class="section-label">07 <span>ACCESS</span></div><div class="access-grid"><div><p class="kicker">教室・アクセス</p><h2>音楽を始める場所。</h2></div><div class="location"><h3>清澄白河教室</h3><p>東京都江東区三好<br>清澄白河駅より徒歩3分</p><a class="text-link" href="#access">詳しく見る <span>↗</span></a></div><div class="location"><h3>住吉教室</h3><p>東京都江東区扇橋<br>住吉駅より徒歩7分</p><a class="text-link" href="#access">詳しく見る <span>↗</span></a></div></div></section>
   </main>
-  <div class="floating-cta"><a href="#experience">体験予約</a><a href="#experience">LINE</a><a href="#access">電話</a></div>
-  <footer class="footer"><div class="brand"><span class="brand-main">MODE PLUS</span><span class="brand-sub">MUSIC SCHOOL</span></div><div class="footer-copy">音楽とともに、人生を豊かに。</div><div class="footer-links"><a href="#about">About</a><a href="#courses">Courses</a><a href="#experience">Experience</a></div><small>© MODE PLUS MUSIC SCHOOL</small></footer>
+  <div class="floating-cta"><a href="https://modepluspf.resv.jp/reserve/calendar.php" target="_blank" rel="noopener">体験予約</a><a href="#experience">LINE</a><a href="#access">電話</a></div>
+  <footer class="footer"><div class="brand brand-logo"><img src="img/logo_1-1.png" alt="MODE PLUS MUSIC SCHOOL"></div><div class="footer-copy">音楽とともに、人生を豊かに。</div><div class="footer-links"><a href="#about">About</a><a href="#courses">Courses</a><a href="#experience">Experience</a></div><small>© MODE PLUS MUSIC SCHOOL</small></footer>
 </body>
 </html>
