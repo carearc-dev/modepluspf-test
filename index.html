@@ -161,6 +161,42 @@
     @media(max-width:900px){.voice-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:767px){.voice-grid{grid-template-columns:1fr}.voice-grid .voice-photo{border-radius:14px}}
     @media(max-width:767px){.teacher-card .teacher-portrait{border-radius:14px!important}}
+    /* TOP typography: keep Japanese phrases together without changing the copy. */
+    .text-chunk{display:inline-block;white-space:nowrap}
+    .hero-copy{min-width:0}
+    .hero h1{font-size:clamp(38px,3.75vw,52px);letter-spacing:.04em}
+    .hero h1 .headline-line{display:block;white-space:nowrap}
+    .intro h2{font-size:clamp(28px,2.7vw,38px)}
+    .reason-copy h2{font-size:clamp(28px,2.5vw,34px)}
+    .access h2{font-size:clamp(28px,2.8vw,38px)}
+    .teacher-heading,.voice-heading{gap:24px}
+    .teacher-heading>div,.voice-heading>div{min-width:0}
+    .teacher-heading .more-button,.voice-heading .more-button{flex-shrink:0;white-space:nowrap}
+    .six-courses .course-info{padding-left:clamp(18px,2.4vw,34px);padding-right:clamp(18px,2.4vw,34px);padding-bottom:90px}
+    .six-courses .course-info h3{white-space:nowrap}
+    .six-courses .course-info p,.body-copy,.voice-grid article p,.news-list a>span{text-wrap:pretty;line-break:strict;overflow-wrap:break-word}
+    .news-list a>span{min-width:0}
+    .news-list a{grid-template-columns:110px minmax(0,1fr) 34px}
+    .legend-swatch{flex-shrink:0}
+    @media(min-width:1025px){
+      .hero-copy{padding-right:clamp(24px,3vw,56px)}
+    }
+    @media(min-width:768px) and (max-width:1024px){
+      .hero h1{font-size:48px}
+    }
+    @media(max-width:767px){
+      .hero h1{font-size:clamp(30px,9.6vw,38px)}
+      .intro h2,.teacher-heading h2,.access h2{font-size:clamp(26px,7.6vw,30px)}
+      .reason-copy h2{font-size:clamp(25px,7.2vw,29px)}
+      .voice-heading{display:block}
+      .voice-heading h2{font-size:clamp(24px,7.5vw,30px)}
+      .voice-heading .more-button{display:inline-block;margin-top:22px}
+      .experience h2{font-size:clamp(23px,7.2vw,29px)}
+      .news-list a{grid-template-columns:minmax(0,1fr) 34px;gap:6px 12px}
+      .news-list time{grid-column:1;grid-row:1}
+      .news-list a>span{grid-column:1;grid-row:2}
+      .news-list b{grid-column:2;grid-row:1 / span 2}
+    }
   </style>
 </head>
 <body>
@@ -178,8 +214,8 @@
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow">MUSIC, WITH YOUR LIFE.</p>
-        <h1>音楽とともに、<br><em>人生を豊かに。</em></h1>
-        <p class="hero-lead">ピアノと歌。<br>一人ひとりの今に寄り添う、音楽の時間。</p>
+        <h1><span class="headline-line">音楽とともに、</span><em class="headline-line">人生を豊かに。</em></h1>
+        <p class="hero-lead">ピアノと歌。<br><span class="text-chunk">一人ひとりの今に寄り添う、</span><span class="text-chunk">音楽の時間。</span></p>
         <a class="button button-dark" href="#experience">体験レッスンについて <span>↗</span></a>
       </div>
       <div class="hero-image image-hero" role="img" aria-label="ピアノのある音楽教室"></div>
@@ -190,7 +226,7 @@
       <div class="section-label">01 <span>ABOUT MODE PLUS</span></div>
       <div class="intro-content">
         <p class="kicker">音楽を、もっと自分らしく。</p>
-        <h2>上質な時間の中で、<br>長く続く音楽を。</h2>
+        <h2><span class="text-chunk">上質な時間の中で、</span><br><span class="text-chunk">長く続く音楽を。</span></h2>
         <p class="body-copy">モードプラスは、子どもから大人まで、ピアノと歌を学べる音楽スクールです。確かな専門性と、一人ひとりに合わせた丁寧なレッスンで、音楽が日々の暮らしにあるよろこびを育てます。</p>
         <a class="text-link" href="#about">モードプラスについて <span>↗</span></a>
       </div>
@@ -211,12 +247,12 @@
       <div class="section-label">03 <span>COURSE NAVIGATION</span></div>
       <div class="section-heading"><div><p class="kicker">6つの入口から、あなたの音楽へ。</p><h2>COURSES</h2></div><p class="heading-note">年齢や目的に合わせて、<br>自分に合うコースをお選びください。</p></div>
       <div class="course-grid six-courses">
-        <a class="course-card course-group" href="group.html"><div class="course-image image-piano"></div><div class="course-info"><span class="course-number">01</span><h3>グループ</h3><p>1〜5歳の音楽体験。<br>年齢別のクラスをご案内します。</p><span class="circle-arrow">↗</span></div></a>
-        <a class="course-card" href="#courses"><div class="course-image image-piano"></div><div class="course-info"><span class="course-number">02</span><h3>子どもの<br>個人ピアノ</h3><p>4〜18歳。成長に合わせた個人レッスン。</p><span class="circle-arrow">↗</span></div></a>
-        <a class="course-card" href="#courses"><div class="course-image image-vocal"></div><div class="course-info"><span class="course-number">03</span><h3>子どもの<br>個人うた</h3><p>4〜18歳。声と表現を育てるレッスン。</p><span class="circle-arrow">↗</span></div></a>
-        <a class="course-card" href="#courses"><div class="course-image image-piano"></div><div class="course-info"><span class="course-number">04</span><h3>大人のピアノ</h3><p>18歳〜。はじめてから再開まで。</p><span class="circle-arrow">↗</span></div></a>
-        <a class="course-card" href="#courses"><div class="course-image image-vocal"></div><div class="course-info"><span class="course-number">05</span><h3>大人のうた</h3><p>18歳〜。目的に合わせた声のレッスン。</p><span class="circle-arrow">↗</span></div></a>
-        <a class="course-card" href="#courses"><div class="course-image image-piano"></div><div class="course-info"><span class="course-number">06</span><h3>受験対策</h3><p>ピアノ・うた・ソルフェージュ。</p><span class="circle-arrow">↗</span></div></a>
+        <a class="course-card course-group" href="group.html"><div class="course-image image-piano"></div><div class="course-info"><span class="course-number">01</span><h3>グループ</h3><p><span class="text-chunk">1〜5歳の音楽体験。</span><br><span class="text-chunk">年齢別のクラスを</span><span class="text-chunk">ご案内します。</span></p><span class="circle-arrow">↗</span></div></a>
+        <a class="course-card" href="#courses"><div class="course-image image-piano"></div><div class="course-info"><span class="course-number">02</span><h3>子どもの<br>個人ピアノ</h3><p><span class="text-chunk">4〜18歳。</span><span class="text-chunk">成長に合わせた</span><span class="text-chunk">個人レッスン。</span></p><span class="circle-arrow">↗</span></div></a>
+        <a class="course-card" href="#courses"><div class="course-image image-vocal"></div><div class="course-info"><span class="course-number">03</span><h3>子どもの<br>個人うた</h3><p><span class="text-chunk">4〜18歳。</span><span class="text-chunk">声と表現を育てる</span><span class="text-chunk">レッスン。</span></p><span class="circle-arrow">↗</span></div></a>
+        <a class="course-card" href="#courses"><div class="course-image image-piano"></div><div class="course-info"><span class="course-number">04</span><h3>大人のピアノ</h3><p><span class="text-chunk">18歳〜。</span><span class="text-chunk">はじめてから再開まで。</span></p><span class="circle-arrow">↗</span></div></a>
+        <a class="course-card" href="#courses"><div class="course-image image-vocal"></div><div class="course-info"><span class="course-number">05</span><h3>大人のうた</h3><p><span class="text-chunk">18歳〜。</span><span class="text-chunk">目的に合わせた</span><span class="text-chunk">声のレッスン。</span></p><span class="circle-arrow">↗</span></div></a>
+        <a class="course-card" href="#courses"><div class="course-image image-piano"></div><div class="course-info"><span class="course-number">06</span><h3>受験対策</h3><p><span class="text-chunk">ピアノ・うた・</span><span class="text-chunk">ソルフェージュ。</span></p><span class="circle-arrow">↗</span></div></a>
       </div>
       <div class="group-color-legend" aria-label="グループレッスンの色分け">
         <p>グループレッスンのクラス</p>
@@ -232,17 +268,17 @@
     </section>
 
     <section class="reasons section">
-      <div class="reason-image image-room"></div><div class="reason-copy"><div class="section-label">05 <span>WHY MODE PLUS</span></div><p class="kicker">選ばれる理由</p><h2>音楽に向き合う時間を、<br>美しく、丁寧に。</h2><ul><li><b>01</b><span>専門性のある講師による、<br>一人ひとりに合わせた指導</span></li><li><b>02</b><span>40分のマンツーマンレッスン</span></li><li><b>03</b><span>グランドピアノと、整えられた教室空間</span></li><li><b>04</b><span>発表会や面談まで続く、長いサポート</span></li></ul></div>
+      <div class="reason-image image-room"></div><div class="reason-copy"><div class="section-label">05 <span>WHY MODE PLUS</span></div><p class="kicker">選ばれる理由</p><h2><span class="text-chunk">音楽に向き合う</span><span class="text-chunk">時間を、</span><br><span class="text-chunk">美しく、</span><span class="text-chunk">丁寧に。</span></h2><ul><li><b>01</b><span>専門性のある講師による、<br>一人ひとりに合わせた指導</span></li><li><b>02</b><span>40分のマンツーマンレッスン</span></li><li><b>03</b><span>グランドピアノと、整えられた教室空間</span></li><li><b>04</b><span>発表会や面談まで続く、長いサポート</span></li></ul></div>
     </section>
 
-    <section class="voices section" id="teachers"><div class="section-label">06 <span>TEACHERS</span></div><div class="teacher-heading"><div><p class="kicker">講師紹介</p><h2>音楽を学ぶ人に、<br>音楽を愛する人が寄り添う。</h2></div><a class="more-button" href="#teachers">MORE <span>↗</span></a></div><div class="teacher-grid"><article class="teacher-card"><div class="teacher-portrait teacher-one"><img src="teacher-03.png" alt="和田 蕗子"></div><small>PIANO / DIRECTOR</small><h3>和田 蕗子</h3><p>代表・ピアノ</p></article><article class="teacher-card"><div class="teacher-portrait teacher-two"><img src="teacher-01.png" alt="永本 志帆"></div><small>PIANO / RHYTHMIC</small><h3>永本 志帆</h3><p>ピアノ・リトミック</p></article><article class="teacher-card"><div class="teacher-portrait teacher-three"><img src="teacher-02.png" alt="後藤 亜季"></div><small>VOCAL</small><h3>後藤 亜季</h3><p>うた・リトミック</p></article></div></section>
-    <section class="student-voices section" id="voices"><div class="voice-notes" aria-hidden="true"><span>♪</span><span>♫</span><span>𝄞</span><span>♪</span></div><div class="section-label">07 <span>STUDENT VOICES</span></div><div class="voice-heading"><div><p class="kicker">生徒様の声</p><h2>音楽がある毎日を、<br>それぞれの場所から。</h2></div><a class="more-button" href="#voices">MORE <span>↗</span></a></div><div class="voice-grid"><article><div class="voice-photo voice-photo-01"></div><span>リトミック ぶどう親子クラス</span><p>音楽に合わせて体を動かすことに興味を持ち、家族の前で踊りを披露しています。（3歳）</p></article><article><div class="voice-photo voice-photo-02"></div><span>リトミック ぶどう親子クラス</span><p>歌や踊りが大好きになりました。音楽が聴こえるたびにノリノリです。（3歳）</p></article><article><div class="voice-photo voice-photo-03"></div><span>リトミック いちごクラス</span><p>音楽を聴くとすぐに覚えて歌うことが多くなりました。（5歳）</p></article></div></section>
+    <section class="voices section" id="teachers"><div class="section-label">06 <span>TEACHERS</span></div><div class="teacher-heading"><div><p class="kicker">講師紹介</p><h2><span class="text-chunk">音楽を学ぶ人に、</span><br><span class="text-chunk">音楽を愛する人が</span><span class="text-chunk">寄り添う。</span></h2></div><a class="more-button" href="#teachers">MORE <span>↗</span></a></div><div class="teacher-grid"><article class="teacher-card"><div class="teacher-portrait teacher-one"><img src="teacher-03.png" alt="和田 蕗子"></div><small>PIANO / DIRECTOR</small><h3>和田 蕗子</h3><p>代表・ピアノ</p></article><article class="teacher-card"><div class="teacher-portrait teacher-two"><img src="teacher-01.png" alt="永本 志帆"></div><small>PIANO / RHYTHMIC</small><h3>永本 志帆</h3><p>ピアノ・リトミック</p></article><article class="teacher-card"><div class="teacher-portrait teacher-three"><img src="teacher-02.png" alt="後藤 亜季"></div><small>VOCAL</small><h3>後藤 亜季</h3><p>うた・リトミック</p></article></div></section>
+    <section class="student-voices section" id="voices"><div class="voice-notes" aria-hidden="true"><span>♪</span><span>♫</span><span>𝄞</span><span>♪</span></div><div class="section-label">07 <span>STUDENT VOICES</span></div><div class="voice-heading"><div><p class="kicker">生徒様の声</p><h2><span class="text-chunk">音楽がある毎日を、</span><br><span class="text-chunk">それぞれの場所から。</span></h2></div><a class="more-button" href="#voices">MORE <span>↗</span></a></div><div class="voice-grid"><article><div class="voice-photo voice-photo-01"></div><span>リトミック ぶどう親子クラス</span><p>音楽に合わせて体を動かすことに興味を持ち、家族の前で踊りを披露しています。（3歳）</p></article><article><div class="voice-photo voice-photo-02"></div><span>リトミック ぶどう親子クラス</span><p>歌や踊りが大好きになりました。音楽が聴こえるたびにノリノリです。（3歳）</p></article><article><div class="voice-photo voice-photo-03"></div><span>リトミック いちごクラス</span><p>音楽を聴くとすぐに覚えて歌うことが多くなりました。（5歳）</p></article></div></section>
 
-    <section class="news section" id="news"><div class="section-label">08 <span>NEWS</span></div><div class="news-grid"><div><p class="kicker">お知らせ</p><h2>教室からのお知らせ</h2></div><div class="news-list"><a href="#news"><time>2026.09.01</time><span>秋の体験レッスンについて</span><b>↗</b></a><a href="#news"><time>2026.08.18</time><span>発表会・コンサートのお知らせ</span><b>↗</b></a><a href="#news"><time>2026.08.04</time><span>各教室の開講状況について</span><b>↗</b></a></div></div></section>
+    <section class="news section" id="news"><div class="section-label">08 <span>NEWS</span></div><div class="news-grid"><div><p class="kicker">お知らせ</p><h2><span class="text-chunk">教室からの</span><span class="text-chunk">お知らせ</span></h2></div><div class="news-list"><a href="#news"><time>2026.09.01</time><span>秋の体験レッスンについて</span><b>↗</b></a><a href="#news"><time>2026.08.18</time><span>発表会・コンサートのお知らせ</span><b>↗</b></a><a href="#news"><time>2026.08.04</time><span>各教室の開講状況について</span><b>↗</b></a></div></div></section>
 
-    <section class="experience" id="experience"><div class="experience-inner"><p class="eyebrow">EXPERIENCE LESSON</p><h2>まずは、音楽のある時間を<br>体験してみませんか。</h2><p>レッスンのこと、教室のこと。<br>気になることからお聞かせください。</p><a class="button button-dark" href="https://modepluspf.resv.jp/reserve/calendar.php" target="_blank" rel="noopener">体験レッスンを予約する <span>↗</span></a></div></section>
+    <section class="experience" id="experience"><div class="experience-inner"><p class="eyebrow">EXPERIENCE LESSON</p><h2><span class="text-chunk">まずは、</span><span class="text-chunk">音楽のある時間を</span><br><span class="text-chunk">体験してみませんか。</span></h2><p>レッスンのこと、教室のこと。<br>気になることからお聞かせください。</p><a class="button button-dark" href="https://modepluspf.resv.jp/reserve/calendar.php" target="_blank" rel="noopener">体験レッスンを予約する <span>↗</span></a></div></section>
 
-    <section class="access section" id="access"><div class="section-label">07 <span>ACCESS</span></div><div class="access-grid"><div><p class="kicker">教室・アクセス</p><h2>音楽を始める場所。</h2></div><div class="location"><h3>清澄白河教室</h3><p>東京都江東区三好<br>清澄白河駅より徒歩3分</p><a class="text-link" href="#access">詳しく見る <span>↗</span></a></div><div class="location"><h3>住吉教室</h3><p>東京都江東区扇橋<br>住吉駅より徒歩7分</p><a class="text-link" href="#access">詳しく見る <span>↗</span></a></div></div></section>
+    <section class="access section" id="access"><div class="section-label">07 <span>ACCESS</span></div><div class="access-grid"><div><p class="kicker">教室・アクセス</p><h2><span class="text-chunk">音楽を</span><span class="text-chunk">始める場所。</span></h2></div><div class="location"><h3>清澄白河教室</h3><p>東京都江東区三好<br>清澄白河駅より徒歩3分</p><a class="text-link" href="#access">詳しく見る <span>↗</span></a></div><div class="location"><h3>住吉教室</h3><p>東京都江東区扇橋<br>住吉駅より徒歩7分</p><a class="text-link" href="#access">詳しく見る <span>↗</span></a></div></div></section>
   </main>
   <div class="floating-cta"><a href="https://modepluspf.resv.jp/reserve/calendar.php" target="_blank" rel="noopener">体験予約</a><a href="#experience">LINE</a><a href="#access">電話</a></div>
   <footer class="footer"><div class="brand brand-logo"><img src="img/logo_1-1.png" alt="MODE PLUS MUSIC SCHOOL"></div><div class="footer-copy">音楽とともに、人生を豊かに。</div><div class="footer-links"><a href="#about">About</a><a href="#courses">Courses</a><a href="#experience">Experience</a></div><small>© MODE PLUS MUSIC SCHOOL</small></footer>
