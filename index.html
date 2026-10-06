@@ -113,6 +113,54 @@
     @media(max-width:767px){.voice-grid article:nth-child(2){margin-top:0}.voice-grid .voice-photo{height:230px}.voice-grid article p{padding:0 18px}}
     @media(max-width:767px){.voice-grid-three{grid-template-columns:1fr;gap:20px}.voice-photo{height:220px}.voice-grid-three article p{font-size:15px}}
     @media(max-width:767px){.group-color-legend{padding:18px}.legend-items{display:grid;gap:10px;font-size:11px}}
+    .hero{overflow:hidden}.hero-image,.image-hero{border-radius:0 0 0 150px!important;overflow:hidden}.hero:after{content:'♪';position:absolute;right:46%;bottom:42px;color:rgba(124,145,136,.38);font:46px/1 var(--serif);transform:rotate(-14deg);z-index:1;pointer-events:none}.intro-image{border-radius:48% 0 48% 0!important;overflow:hidden;box-shadow:12px 14px 0 rgba(221,213,199,.45)}.course-card .course-image{border-radius:0 55px 0 0!important}.age:after{content:'♫';position:absolute;left:5vw;bottom:50px;color:rgba(124,145,136,.3);font:34px/1 var(--serif);transform:rotate(12deg);pointer-events:none}.experience:after{content:'♪';position:absolute;left:12%;bottom:20%;color:rgba(124,145,136,.3);font:42px/1 var(--serif);transform:rotate(-18deg);pointer-events:none}@media(max-width:767px){.hero-image,.image-hero{border-radius:0 0 0 70px!important}.hero:after{right:12%;bottom:22px;font-size:34px}.intro-image{border-radius:42% 0 42% 0!important}.course-card .course-image{border-radius:0 32px 0 0!important}.age:after,.experience:after{font-size:28px}}
+    .reason-image{border-radius:0 150px 0 0!important;overflow:hidden}
+    .intro-image{border-radius:18px!important;overflow:hidden;box-shadow:12px 14px 0 rgba(221,213,199,.45)}
+    .header-cta span,.button span,.text-link span,.more-button span,.circle-arrow,.news-list b{font-family:var(--sans);font-weight:300;letter-spacing:0}
+    .header-cta span,.button span,.text-link span,.more-button span{display:inline-block;transform:scale(.92);border-radius:40%}
+    .circle-arrow{border-radius:50%!important}
+    .news-list a{border-radius:18px!important;transition:transform .3s ease,background-color .3s ease,color .3s ease,box-shadow .3s ease;padding-left:22px!important;padding-right:22px!important}
+    .news-list a:hover{background:#dfe8e3;color:var(--ink);transform:translateY(-5px);box-shadow:0 12px 24px rgba(32,37,37,.1)}
+    .six-courses .circle-arrow{font-size:0;width:48px;height:48px;border:1px solid #34443f!important;border-radius:50%!important;display:flex;align-items:center;justify-content:center;line-height:1}
+    .six-courses .circle-arrow:after{content:'→';font-size:24px;font-weight:300}
+    .more-button span{width:34px;height:34px;margin-left:16px;border:1px solid var(--sage);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0;vertical-align:middle}
+    .more-button span:after{content:'→';font-size:17px;font-weight:300}
+    .news-list b,.text-link span{width:34px;height:34px;border:1px solid currentColor;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0;vertical-align:middle}
+    .news-list b:after,.text-link span:after{content:'→';font-size:17px;font-weight:300}
+    .header-cta{min-width:190px;padding-left:42px;position:relative}
+    .header-cta:before{content:'♪';position:absolute;left:18px;top:50%;transform:translateY(-52%) rotate(-10deg);font-size:20px;color:#dfe8e3}
+    .header-cta span{font-size:0;width:28px;height:28px;border:1px solid rgba(255,255,255,.7);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-left:14px}
+    .header-cta span:after{content:'→';font-size:15px;font-weight:300}
+    .text-link,.more-button,.button,.footer-links a{transition:background-color .28s ease,color .28s ease,transform .28s ease,box-shadow .28s ease}
+    .text-link:hover,.more-button:hover,.footer-links a:hover{background:#dfe8e3;color:var(--ink);transform:translateY(-3px);box-shadow:0 8px 18px rgba(32,37,37,.08)}
+    .button:hover,.header-cta:hover{background:var(--sage);border-color:var(--sage);transform:translateY(-3px);box-shadow:0 8px 18px rgba(32,37,37,.12)}
+    @media(max-width:767px){.reason-image{border-radius:0 70px 0 0!important}.intro-image{border-radius:14px!important}.news-list a{border-radius:14px!important}}
+    .text-link:hover,.more-button:hover,.footer-links a:hover{background:transparent!important;color:inherit;transform:none;box-shadow:none}
+    .news-list a:hover{background:transparent!important;color:inherit;transform:none;box-shadow:none}
+    .text-link span,.more-button span,.news-list b{transition:background-color .25s ease,color .25s ease,transform .25s ease}
+    .text-link:hover span,.more-button:hover span,.news-list a:hover b{background:var(--sage);color:#fff;transform:translateX(4px)}
+    .teacher-card .teacher-portrait{border-radius:18px!important;overflow:hidden;position:relative}
+    .teacher-card .teacher-portrait:after{content:'♪ 𝄞';position:absolute;right:16px;bottom:12px;color:rgba(255,255,255,.9);font:22px/1 var(--serif);letter-spacing:5px;text-shadow:0 1px 8px rgba(32,37,37,.35);transform:rotate(-8deg);pointer-events:none}
+    .teacher-card .teacher-three{background:#d9d7d2!important}
+    .teacher-card .teacher-three img{display:block;width:100%;height:100%;margin:0!important;object-fit:cover;object-position:center top;transform:none!important}
+    .voice-grid{grid-template-columns:repeat(3,1fr);gap:24px}
+    .voice-grid article:nth-child(2){margin-top:0}
+    .voice-grid .voice-photo{border-radius:18px;overflow:hidden}
+    .voice-grid article:nth-child(1)>span,.voice-grid article:nth-child(2)>span{background:#a98cba}
+    .voice-grid article:nth-child(3)>span{background:#d96767}
+    .voice-grid .voice-photo-01{background-image:url('img/voice-01.png')}.voice-grid .voice-photo-02{background-image:url('img/voice-02.png')}.voice-grid .voice-photo-03{background-image:url('img/voice-03.png')}
+    .student-voices{position:relative;overflow:hidden}
+    .student-voices:before{content:'';position:absolute;right:-30px;top:58px;width:720px;height:115px;border-top:1px solid rgba(255,255,255,.5);border-bottom:1px solid rgba(255,255,255,.35);border-radius:50%;transform:rotate(-8deg);box-shadow:0 23px 0 rgba(255,255,255,.38),0 46px 0 rgba(255,255,255,.25),0 69px 0 rgba(255,255,255,.15);pointer-events:none}
+    .student-voices .voice-notes{position:absolute;right:5px;top:40px;display:flex;align-items:flex-start;gap:62px;font:74px/1 var(--serif);transform:rotate(-8deg);pointer-events:none;z-index:0}
+    .student-voices .voice-notes span{color:#c6dfe5;font:inherit;letter-spacing:0}
+    .student-voices .voice-notes span:nth-child(2){color:#e5d8b3}
+    .student-voices .voice-notes span:nth-child(3){color:#d7a6b7}
+    .student-voices .voice-notes span:nth-child(4){color:#8ca687}
+    .student-voices:after{content:'';display:none}
+    .student-voices .section-label,.student-voices .voice-heading,.student-voices .voice-grid{position:relative;z-index:1}
+    @media(max-width:900px){.voice-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:767px){.voice-grid{grid-template-columns:1fr}.voice-grid .voice-photo{border-radius:14px}}
+    @media(max-width:767px){.teacher-card .teacher-portrait{border-radius:14px!important}}
   </style>
 </head>
 <body>
@@ -163,7 +211,7 @@
       <div class="section-label">03 <span>COURSE NAVIGATION</span></div>
       <div class="section-heading"><div><p class="kicker">6つの入口から、あなたの音楽へ。</p><h2>COURSES</h2></div><p class="heading-note">年齢や目的に合わせて、<br>自分に合うコースをお選びください。</p></div>
       <div class="course-grid six-courses">
-        <a class="course-card course-group" href="#courses"><div class="course-image image-piano"></div><div class="course-info"><span class="course-number">01</span><h3>グループ</h3><p>1〜5歳の音楽体験。<br>年齢別のクラスをご案内します。</p><span class="circle-arrow">↗</span></div></a>
+        <a class="course-card course-group" href="group.html"><div class="course-image image-piano"></div><div class="course-info"><span class="course-number">01</span><h3>グループ</h3><p>1〜5歳の音楽体験。<br>年齢別のクラスをご案内します。</p><span class="circle-arrow">↗</span></div></a>
         <a class="course-card" href="#courses"><div class="course-image image-piano"></div><div class="course-info"><span class="course-number">02</span><h3>子どもの<br>個人ピアノ</h3><p>4〜18歳。成長に合わせた個人レッスン。</p><span class="circle-arrow">↗</span></div></a>
         <a class="course-card" href="#courses"><div class="course-image image-vocal"></div><div class="course-info"><span class="course-number">03</span><h3>子どもの<br>個人うた</h3><p>4〜18歳。声と表現を育てるレッスン。</p><span class="circle-arrow">↗</span></div></a>
         <a class="course-card" href="#courses"><div class="course-image image-piano"></div><div class="course-info"><span class="course-number">04</span><h3>大人のピアノ</h3><p>18歳〜。はじめてから再開まで。</p><span class="circle-arrow">↗</span></div></a>
@@ -188,7 +236,7 @@
     </section>
 
     <section class="voices section" id="teachers"><div class="section-label">06 <span>TEACHERS</span></div><div class="teacher-heading"><div><p class="kicker">講師紹介</p><h2>音楽を学ぶ人に、<br>音楽を愛する人が寄り添う。</h2></div><a class="more-button" href="#teachers">MORE <span>↗</span></a></div><div class="teacher-grid"><article class="teacher-card"><div class="teacher-portrait teacher-one"><img src="teacher-03.png" alt="和田 蕗子"></div><small>PIANO / DIRECTOR</small><h3>和田 蕗子</h3><p>代表・ピアノ</p></article><article class="teacher-card"><div class="teacher-portrait teacher-two"><img src="teacher-01.png" alt="永本 志帆"></div><small>PIANO / RHYTHMIC</small><h3>永本 志帆</h3><p>ピアノ・リトミック</p></article><article class="teacher-card"><div class="teacher-portrait teacher-three"><img src="teacher-02.png" alt="後藤 亜季"></div><small>VOCAL</small><h3>後藤 亜季</h3><p>うた・リトミック</p></article></div></section>
-    <section class="student-voices section" id="voices"><div class="section-label">07 <span>STUDENT VOICES</span></div><div class="voice-heading"><div><p class="kicker">生徒様の声</p><h2>音楽がある毎日を、<br>それぞれの場所から。</h2></div><a class="more-button" href="#voices">MORE <span>↗</span></a></div><div class="voice-grid"><article><div class="voice-photo voice-photo-01"></div><span>リトミック ぶどう親子クラス</span><p>音楽に合わせて体を動かすことに興味を持ち、家族の前で踊りを披露しています。（3歳）</p></article><article><div class="voice-photo voice-photo-02"></div><span>リトミック ぶどう親子クラス</span><p>歌や踊りが大好きになりました。音楽が聴こえるたびにノリノリです。（3歳）</p></article></div></section>
+    <section class="student-voices section" id="voices"><div class="voice-notes" aria-hidden="true"><span>♪</span><span>♫</span><span>𝄞</span><span>♪</span></div><div class="section-label">07 <span>STUDENT VOICES</span></div><div class="voice-heading"><div><p class="kicker">生徒様の声</p><h2>音楽がある毎日を、<br>それぞれの場所から。</h2></div><a class="more-button" href="#voices">MORE <span>↗</span></a></div><div class="voice-grid"><article><div class="voice-photo voice-photo-01"></div><span>リトミック ぶどう親子クラス</span><p>音楽に合わせて体を動かすことに興味を持ち、家族の前で踊りを披露しています。（3歳）</p></article><article><div class="voice-photo voice-photo-02"></div><span>リトミック ぶどう親子クラス</span><p>歌や踊りが大好きになりました。音楽が聴こえるたびにノリノリです。（3歳）</p></article><article><div class="voice-photo voice-photo-03"></div><span>リトミック いちごクラス</span><p>音楽を聴くとすぐに覚えて歌うことが多くなりました。（5歳）</p></article></div></section>
 
     <section class="news section" id="news"><div class="section-label">08 <span>NEWS</span></div><div class="news-grid"><div><p class="kicker">お知らせ</p><h2>教室からのお知らせ</h2></div><div class="news-list"><a href="#news"><time>2026.09.01</time><span>秋の体験レッスンについて</span><b>↗</b></a><a href="#news"><time>2026.08.18</time><span>発表会・コンサートのお知らせ</span><b>↗</b></a><a href="#news"><time>2026.08.04</time><span>各教室の開講状況について</span><b>↗</b></a></div></div></section>
 

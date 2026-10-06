@@ -32,3 +32,12 @@
 .intro{grid-template-columns:minmax(0,1fr) 500px}.intro .intro-aside{min-width:500px}.intro-image{width:500px;height:333px;min-width:500px;flex:0 0 500px}
 .intro{column-gap:30px}
 .intro{column-gap:0}
+/* Soft curved image treatment inspired by Kawai Music School */
+.hero{overflow:hidden}
+.hero-image,.image-hero{border-radius:0 0 0 150px;overflow:hidden}
+.hero:after{content:'♪';position:absolute;right:46%;bottom:42px;color:rgba(124,145,136,.38);font:46px/1 var(--serif);transform:rotate(-14deg);z-index:1;pointer-events:none}
+.intro-image{border-radius:48% 0 48% 0;overflow:hidden;box-shadow:12px 14px 0 rgba(221,213,199,.45)}
+.course-card .course-image{border-radius:0 55px 0 0}
+.age:after{content:'♫';position:absolute;left:5vw;bottom:50px;color:rgba(124,145,136,.3);font:34px/1 var(--serif);transform:rotate(12deg);pointer-events:none}
+.experience:after{content:'♪';position:absolute;left:12%;bottom:20%;color:rgba(124,145,136,.3);font:42px/1 var(--serif);transform:rotate(-18deg);pointer-events:none}
+@media(max-width:767px){.hero-image,.image-hero{border-radius:0 0 0 70px}.hero:after{right:12%;bottom:22px;font-size:34px}.intro-image{border-radius:42% 0 42% 0}.course-card .course-image{border-radius:0 32px 0 0}.age:after,.experience:after{font-size:28px}}
