@@ -3,6 +3,7 @@ from collections import Counter
 from datetime import date, datetime
 from html.parser import HTMLParser
 from pathlib import Path
+import re
 from urllib.parse import unquote, urlsplit
 from zoneinfo import ZoneInfo
 
@@ -113,7 +114,19 @@ for tag, attrs in page.elements:
 
 group = Page((ROOT / 'group.html').read_text())
 assert not any(t == 'a' and a.get('href') == '#' for t, a in group.elements)
+
+css = (ROOT / 'home.css').read_text()
+for source in re.findall(r'url\([\'"]?([^\)\'\"]+)[\'"]?\)', css):
+    if not urlsplit(source).scheme:
+        assert (ROOT / source).is_file(), f'Missing CSS asset: {source}'
+for icon in ['img/ui/score-link.svg', 'img/ui/line-arrow.svg']:
+    assert icon in css, f'Custom link motif missing: {icon}'
+for selector in [r'\.arrow', r'\.play-link i', r'\.header-cta']:
+    rule = re.search(selector + r'\{([^}]+)\}', css).group(1)
+    assert 'border-radius:0' in rule, 'Round link enclosure must not return'
+assert '.header-enhanced .site-header:focus-within' in css, 'Keyboard navigation must stay visible'
+assert '@media(prefers-reduced-motion:reduce)' in css, 'Motion preference must be respected'
 print(
     'PASS: structure, one hero image, 3 pickups, 6 courses, 3 FAQ items, '
-    f'3 visit steps, {images} images, assets, anchors, safe links, preview metadata'
+    f'3 visit steps, {images} images, CSS assets, score links, anchors, safe links, preview metadata'
 )

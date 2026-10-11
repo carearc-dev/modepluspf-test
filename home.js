@@ -167,6 +167,73 @@
     window.addEventListener('resize', closeOnDesktop, { passive: true });
   };
 
+  const setupScrollHeader = () => {
+    const header = document.querySelector('.site-header');
+    if (!header) return;
+
+    // Do not make the header disappear until its enhancement is ready. This
+    // keeps every navigation route usable when JavaScript is unavailable.
+    try {
+      const SHOW_AFTER = 90;
+      const HIDE_AT_OR_BEFORE = 24;
+      let framePending = false;
+      let headerHasFocus = false;
+
+      const scrollPosition = () => Math.max(
+        0,
+        window.scrollY || window.pageYOffset || root.scrollTop || 0
+      );
+
+      const sync = () => {
+        framePending = false;
+
+        const menuIsOpen = root.classList.contains('menu-open');
+        const keepVisible = menuIsOpen || headerHasFocus;
+        const position = scrollPosition();
+
+        if (keepVisible || position >= SHOW_AFTER) {
+          root.classList.add('header-visible');
+        } else if (position <= HIDE_AT_OR_BEFORE) {
+          root.classList.remove('header-visible');
+        }
+        // Between 25px and 89px, retain the previous state. It prevents the
+        // header from flickering while a visitor makes small scroll movements.
+      };
+
+      const scheduleSync = () => {
+        if (framePending) return;
+        framePending = true;
+        window.requestAnimationFrame(sync);
+      };
+
+      const onFocusIn = () => {
+        headerHasFocus = true;
+        root.classList.add('header-visible');
+      };
+      const onFocusOut = () => {
+        // Let the browser move focus before deciding whether it is still in
+        // the header (for example, while tabbing between navigation links).
+        window.requestAnimationFrame(() => {
+          headerHasFocus = header.contains(document.activeElement);
+          scheduleSync();
+        });
+      };
+
+      window.addEventListener('scroll', scheduleSync, { passive: true });
+      window.addEventListener('pageshow', scheduleSync, { passive: true });
+      header.addEventListener('focusin', onFocusIn);
+      header.addEventListener('focusout', onFocusOut);
+
+      root.classList.add('header-enhanced');
+      // Covers normal loads, a reload part-way down the page, and browser
+      // history restoration where the initial scroll position is available.
+      scheduleSync();
+    } catch (_) {
+      // Fail open: a broken enhancement must leave the header visible.
+      root.classList.remove('header-enhanced', 'header-visible');
+    }
+  };
+
   const setupReplay = () => {
     document.querySelectorAll('[data-replay-intro]').forEach((control) => {
       control.addEventListener('click', (event) => {
@@ -181,10 +248,12 @@
       setupReveals();
       setupMenu();
       setupReplay();
+      setupScrollHeader();
       startIntro();
     } catch (_) {
       // A non-critical enhancement must never leave the first view obscured.
       finishIntro();
+      root.classList.remove('header-enhanced', 'header-visible');
       document.querySelectorAll('[data-reveal]').forEach((item) => {
         item.classList.remove('will-reveal');
         item.classList.add('is-visible');
