@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 160" role="img" aria-labelledby="title desc">
+  <title id="title">グランドピアノと音符の線画</title>
+  <desc id="desc">深い緑の線で描いた、鍵盤が見える横からのグランドピアノと小さな音符のイラスト</desc>
+  <g fill="none" stroke="#294139" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke-width="2.8" d="M27 84c7-28 34-45 68-45 34 0 62 13 76 37l15 3-12 11H40l-13-6Z"/>
+    <path stroke-width="2.3" d="M35 83c16-22 38-32 66-32 29 0 50 10 65 29"/>
+    <path stroke-width="2.6" d="M39 88h118v25H39z"/>
+    <path stroke-width="1.7" d="M51 89v23M63 89v23M75 89v23M87 89v23M99 89v23M111 89v23M123 89v23M135 89v23M147 89v23"/>
+    <path stroke-width="3" d="M58 89v12M70 89v12M94 89v12M106 89v12M118 89v12M142 89v12"/>
+    <path stroke-width="2.5" d="M49 113l-7 29M143 113l8 29M117 113l3 29"/>
+    <path stroke-width="2.1" d="M91 113v22c0 5 5 7 10 7s10-2 10-7v-22M98 142v7M104 142v7"/>
+    <path stroke-width="2.1" d="M175 101h19l-3 18h-14l-2-18ZM180 119l-3 18M189 119l4 18"/>
+    <path stroke-width="2.3" d="M184 95v-8c0-5 3-8 7-9"/>
+    <path stroke-width="2.3" d="M181 41v16c-6-3-11-1-11 4 0 5 6 5 11 2M181 41l12-4v16c-6-3-11-1-11 4 0 5 6 5 11 2"/>
+    <path stroke-width="1.8" d="M23 57c-7-3-10-8-11-14M28 52c-4-5-5-10-4-15"/>
+  </g>
+  <path fill="#edce77" d="M150 35c3-7 9-10 15-9-1 7-7 12-15 9Z"/>
+  <path fill="#c84945" d="M202 77c2-5 7-7 11-6-1 5-5 8-11 6Z"/>
+  <g fill="#294139"><circle cx="153" cy="35" r="1.7"/><circle cx="205" cy="77" r="1.6"/></g>
+</svg>

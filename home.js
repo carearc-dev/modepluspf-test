@@ -6,7 +6,7 @@
   const INTRO_FAILSAFE_MS = 3000;
   const INTRO_ANIMATION_MS = 2300;
   const INTRO_STORAGE_KEY = 'modeplus-intro-seen';
-  const DESKTOP_QUERY = '(min-width: 961px)';
+  const DESKTOP_QUERY = '(min-width: 1081px)';
 
   let introTimer;
   let failSafeTimer;
