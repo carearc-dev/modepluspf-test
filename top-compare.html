@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>モードプラス TOPデザイン比較</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="top-compare.css">
+  <script src="top-compare.js" defer></script>
+</head>
+<body>
+  <main class="compare-shell">
+    <header class="compare-bar">
+      <div class="compare-title"><p>MODE PLUS MUSIC SCHOOL</p><h1>TOPデザイン比較</h1></div>
+      <div class="compare-controls">
+        <div class="variant-switch" role="group" aria-label="デザイン案を選択">
+          <button class="variant-button is-current" type="button" data-variant="a" data-src="index.html" aria-pressed="true"><b>A</b><span>写真が主役の、静かな教室案</span></button>
+          <button class="variant-button" type="button" data-variant="b" data-src="top-b.html" aria-pressed="false"><b>B</b><span>音楽のアトリエ案</span></button>
+        </div>
+        <div class="device-switch" role="group" aria-label="表示幅を選択">
+          <button class="device-button is-current" type="button" data-device="desktop" aria-pressed="true">PC幅</button>
+          <button class="device-button" type="button" data-device="mobile" aria-pressed="false">スマホ幅</button>
+        </div>
+      </div>
+      <nav class="single-links" aria-label="単体プレビューを開く"><a href="index.html" target="_blank" rel="noopener">Aを単体で開く <span aria-hidden="true">↗</span></a><a href="top-b.html" target="_blank" rel="noopener">Bを単体で開く <span aria-hidden="true">↗</span></a></nav>
+    </header>
+    <section class="preview-area" aria-label="TOPデザインのプレビュー">
+      <p class="preview-label" id="preview-label"><span>A</span> 写真が主役の、静かな教室案</p>
+      <div class="device-frame" id="device-frame">
+        <iframe id="site-preview" title="A案：写真が主役の、静かな教室案" src="index.html"></iframe>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

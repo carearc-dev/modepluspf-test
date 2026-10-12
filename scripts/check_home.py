@@ -119,14 +119,34 @@ css = (ROOT / 'home.css').read_text()
 for source in re.findall(r'url\([\'"]?([^\)\'\"]+)[\'"]?\)', css):
     if not urlsplit(source).scheme:
         assert (ROOT / source).is_file(), f'Missing CSS asset: {source}'
-for icon in ['img/ui/score-link.svg', 'img/ui/line-arrow.svg']:
-    assert icon in css, f'Custom link motif missing: {icon}'
-for selector in [r'\.arrow', r'\.play-link i', r'\.header-cta']:
-    rule = re.search(selector + r'\{([^}]+)\}', css).group(1)
-    assert 'border-radius:0' in rule, 'Round link enclosure must not return'
+# Link system: retain the fine line arrow, but use the bespoke cut-tag arrow
+# for the primary calls to action. The old score-link keyboard motif must not leak
+# back in when individual sections are edited later.
+for icon in ['img/ui/tag-arrow.svg', 'img/ui/line-arrow.svg']:
+    assert (ROOT / icon).is_file(), f'Custom link asset missing: {icon}'
+    assert icon in css, f'Custom link motif missing from CSS: {icon}'
+assert 'img/ui/score-link.svg' not in css, 'Previous keyboard motif must not be used'
+
+# Keep the visible notch on a pseudo-element. Applying clip-path directly to
+# the anchor clips its focus outline, which makes keyboard navigation unclear.
+tag_links = ['.play-link', '.ticket-link', '.header-cta']
+for selector in tag_links:
+    direct_rules = re.findall(re.escape(selector) + r'\s*\{([^{}]*)\}', css)
+    assert direct_rules, f'Missing tag link style: {selector}'
+    assert all('clip-path:' not in rule for rule in direct_rules), (
+        f'clip-path must stay off the focusable {selector} element'
+    )
+    assert all(
+        'border-radius:' not in rule or re.search(r'border-radius:\s*0(?:[a-z%]+)?(?:;|$)', rule)
+        for rule in direct_rules
+    ), f'Round link enclosure must not return: {selector}'
+    pseudo = re.search(re.escape(selector) + r'::before\s*\{([^{}]*)\}', css)
+    assert pseudo and 'clip-path:' in pseudo.group(1), (
+        f'Cut-tag background must use {selector}::before with clip-path'
+    )
 assert '.header-enhanced .site-header:focus-within' in css, 'Keyboard navigation must stay visible'
 assert '@media(prefers-reduced-motion:reduce)' in css, 'Motion preference must be respected'
 print(
     'PASS: structure, one hero image, 3 pickups, 6 courses, 3 FAQ items, '
-    f'3 visit steps, {images} images, CSS assets, score links, anchors, safe links, preview metadata'
+    f'3 visit steps, {images} images, cut-tag links, anchors, safe links, preview metadata'
 )
