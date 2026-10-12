@@ -107,7 +107,7 @@ ul,ol{list-style:none;margin:0;padding:0}p{line-break:strict;text-wrap:pretty}
 .numbers dt{font-size:12px;letter-spacing:.03em}.numbers dd{font-family:Georgia,'Times New Roman',serif;font-size:83px;font-weight:400;letter-spacing:-.065em;line-height:1.15;margin:12px 0 0;color:#3d604b}
 .numbers dd small{font-family:var(--sans);font-size:15px;letter-spacing:0;margin-inline:8px}.numbers-note{text-align:right;font-size:9px;color:var(--muted);margin-top:10px}
 .values{display:grid;grid-template-columns:1fr 1fr;gap:8%;margin-top:65px;align-items:center}
-.values-photo{position:relative;aspect-ratio:1.04}.values-photo img{width:100%;height:100%;object-fit:cover;object-position:34% 50%;border-radius:2px 2px 58px 2px}.values-photo>span{position:absolute;left:20px;bottom:20px;background:var(--paper);padding:7px 12px;font-size:10px;transform:rotate(-3deg)}
+.values-photo{position:relative;aspect-ratio:1.04}.values-photo img{width:100%;height:100%;object-fit:cover;object-position:left center;border-radius:2px 2px 58px 2px}.values-photo>span{position:absolute;left:20px;bottom:20px;background:var(--paper);padding:7px 12px;font-size:10px;transform:rotate(-3deg)}
 .values-copy>h3{font-size:19px;margin-bottom:21px}.values-copy li{display:flex;gap:17px;border-top:1px solid #c8d0c1;padding:19px 0}.values-copy li>span{font-family:Georgia,serif;font-style:italic;font-size:20px;color:#839179}.values-copy h4{font-size:17px;margin-bottom:8px;letter-spacing:.025em}.values-copy p{font-size:11px;line-height:1.9;color:#62705e}
 
 /* Introduce the teaching team as a whole; individual profiles belong to the directory. */

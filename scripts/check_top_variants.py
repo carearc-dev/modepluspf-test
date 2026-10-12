@@ -87,6 +87,13 @@ def main() -> int:
     for name, text, page in (("A", a_text, a), ("B", b_text, b)):
         require('name="robots" content="noindex, nofollow"' in text, f"{name}: noindex preview metadata is missing", errors)
         require(page.h1_count == 1, f"{name}: expected exactly one H1", errors)
+        values_photo = re.search(r'<div class="values-photo">\s*(<img\b[^>]*>)', text)
+        require(bool(values_photo) and 'src="img/renewal/kiyosumi-classroom.webp"' in values_photo.group(1),
+                f"{name}: About must use the approved unoccupied classroom photo", errors)
+        require(bool(values_photo) and 'height="556"' in values_photo.group(1) and '教室のレッスン空間' in values_photo.group(1),
+                f"{name}: About photo dimensions or descriptive alt are outdated", errors)
+        require("img/renewal/adult-lesson.webp" not in page.images,
+                f"{name}: the replaced instructor photo must not return to TOP", errors)
         hero_match = re.search(r'<div class="hero-media">\s*<img\b[^>]*>\s*</div>', text)
         require(bool(hero_match), f"{name}: expected one photo-only hero", errors)
         require(page.pickup_cards == 3, f"{name}: expected exactly three pickup cards", errors)
