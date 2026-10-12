@@ -4,7 +4,7 @@
   const label = document.querySelector('#preview-label');
   const variants = {
     a: { src: 'index.html', title: 'A案：写真が主役の、静かな教室案', label: '写真が主役の、静かな教室案' },
-    b: { src: 'top-b.html', title: 'B案：音楽のアトリエ案', label: '音楽のアトリエ案' }
+    b: { src: 'top-b.html', title: 'B案：音楽と暮らしのマガジン案', label: '音楽と暮らしのマガジン案' }
   };
 
   function chooseVariant(button) {
