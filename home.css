@@ -91,7 +91,7 @@ ul,ol{list-style:none;margin:0;padding:0}p{line-break:strict;text-wrap:pretty}
 .course-age{font-size:10px;line-height:1.5;margin-bottom:9px;color:var(--muted)}.course-age::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--course);margin-right:7px}
 .course-info h3{font-size:21px;margin-bottom:9px;letter-spacing:.025em;line-height:1.6}
 .course-info p:not(.course-age){font-size:11px;line-height:1.9;color:var(--muted)}.course-info .arrow{position:absolute;right:0;top:47px;width:34px;height:31px}
-.course-card:is(:hover,:focus-visible) .arrow,.teacher-card:is(:hover,:focus-visible) .arrow{transform:translate(4px,-2px)}
+.course-card:is(:hover,:focus-visible) .arrow,
 .course-card:nth-child(2){--course:#8fc4d5}.course-card:nth-child(3){--course:#d86b6b}.course-card:nth-child(4){--course:#7f9b7c}.course-card:nth-child(5){--course:#a990b7}.course-card:nth-child(6){--course:#d2b16f}
 .photo-note{position:absolute;right:5px;bottom:5px;padding:3px 5px;background:#fffffff0;color:#294139;font-size:8px;line-height:1.5}
 .course-help{display:flex;justify-content:space-between;gap:25px;align-items:center;margin-top:34px;border-top:1px solid var(--line);padding-top:25px}
@@ -110,11 +110,23 @@ ul,ol{list-style:none;margin:0;padding:0}p{line-break:strict;text-wrap:pretty}
 .values-photo{position:relative;aspect-ratio:1.04}.values-photo img{width:100%;height:100%;object-fit:cover;object-position:34% 50%;border-radius:2px 2px 58px 2px}.values-photo>span{position:absolute;left:20px;bottom:20px;background:var(--paper);padding:7px 12px;font-size:10px;transform:rotate(-3deg)}
 .values-copy>h3{font-size:19px;margin-bottom:21px}.values-copy li{display:flex;gap:17px;border-top:1px solid #c8d0c1;padding:19px 0}.values-copy li>span{font-family:Georgia,serif;font-style:italic;font-size:20px;color:#839179}.values-copy h4{font-size:17px;margin-bottom:8px;letter-spacing:.025em}.values-copy p{font-size:11px;line-height:1.9;color:#62705e}
 
-/* People & stories, no decorative card chrome. */
-.teachers .section-heading{margin-bottom:30px}.teacher-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:38px}
-.teacher-photo{aspect-ratio:1.18;overflow:hidden;background:#eeebe2}.teacher-photo img{height:100%;width:100%;object-fit:cover;object-position:center 22%;transition:transform .5s}.teacher-card:hover img{transform:scale(1.025)}
-.teacher-card small{font-family:Arial,var(--sans);font-size:9px;letter-spacing:.08em;color:var(--muted);display:block;margin-top:19px}
-.teacher-card h3{display:flex;align-items:center;justify-content:space-between;font-size:22px;margin-top:5px}.teacher-card p{font-size:11px;color:var(--muted);margin-top:5px}.teacher-card .arrow{width:30px;height:27px}
+/* Introduce the teaching team as a whole; individual profiles belong to the directory. */
+.teachers .section-heading{margin-bottom:36px}
+.teacher-intro{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:7%;align-items:center}
+.teacher-portraits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}
+.teacher-portrait{aspect-ratio:.75;overflow:hidden;background:#eeebe2}
+.teacher-portrait:nth-child(2){margin-top:24px}
+.teacher-portrait img{height:100%;width:100%;object-fit:cover;object-position:center 22%}
+.teacher-summary{min-width:0}
+.teacher-expertise{font-size:clamp(20px,2vw,26px);font-weight:500;line-height:1.75;letter-spacing:.03em}
+.teacher-summary>p{font-size:13px;line-height:2.1;color:var(--muted);margin-top:20px;max-width:34em}
+.teacher-disciplines{display:flex;flex-wrap:wrap;gap:8px 0;margin-top:23px}
+.teacher-disciplines li{border-left:2px solid #b99162;padding:0 12px;font-size:12px;line-height:1.7;white-space:nowrap}
+.teacher-summary .play-link{margin-top:30px}
+@media(max-width:1080px){.teacher-intro{gap:5%;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.teacher-portraits{gap:9px}.teacher-expertise{font-size:20px}.teacher-summary>p{font-size:12px}}
+@media(max-width:767px){.teachers .section-heading{margin-bottom:27px}.teacher-intro{grid-template-columns:minmax(0,1fr);gap:28px}.teacher-portraits{gap:10px}.teacher-portrait{aspect-ratio:.9}.teacher-portrait:nth-child(2){margin-top:16px}.teacher-expertise{font-size:21px}.teacher-summary>p{margin-top:15px;font-size:12px}.teacher-disciplines{margin-top:20px}.teacher-disciplines li{font-size:11px;padding-inline:10px}.teacher-summary .play-link{margin-top:25px}}
+@media(max-width:359px){.teacher-expertise{font-size:20px}.teacher-disciplines li{padding-inline:8px}}
+/* Student stories retain their original layout. */
 .voices{background:#f0f3ef}.voice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px}.voice-photo{position:relative;aspect-ratio:1.5;overflow:hidden}.voice-photo img{width:100%;height:100%;object-fit:cover;object-position:center 35%}
 .voice-body{padding-top:19px}.voice-class{font-size:10px;color:#587767;margin-bottom:10px}.voice-card h3{font-size:15px;font-weight:500;line-height:1.95;letter-spacing:.025em}.voice-body>p:not(.voice-class){font-size:10px;color:var(--muted);margin-top:12px}
 .voice-body .text-link{margin-top:18px;font-size:10px}.voice-body .arrow{width:28px;height:25px}
@@ -156,7 +168,7 @@ ul,ol{list-style:none;margin:0;padding:0}p{line-break:strict;text-wrap:pretty}
 
 @media(min-width:1600px){.wrap{max-width:1280px}.hero-content{right:7%;width:480px;padding:44px}.hero h1{font-size:47px}.hero-lead{font-size:14px}.hero-location{font-size:11px}}
 @media(max-width:1150px){.site-header{gap:19px}.brand{width:125px}.main-nav{gap:17px;font-size:10px}.header-cta{padding-inline:14px;gap:12px}.hero-content{right:4%;width:380px;padding:30px}.hero h1{font-size:38px}.hero-location{font-size:9px}.hero-lead{font-size:12px}.hero .play-link{font-size:11px}.pickup-grid{gap:23px}.pickup-art{padding-inline:20px}.calendar-icon{width:48px;height:60px}.calendar-icon b{font-size:28px}.pickup-calendar{gap:13px}.course-info h3{font-size:18px}.values-copy h4{font-size:15px}.values-copy>h3{font-size:17px}.visit-steps{gap:20px}.visit-steps h3{font-size:14px}.contact-line{gap:18px}.contact-line>div>p{font-size:15px}.ticket-link{font-size:11px;padding-inline:20px;gap:16px}.contact-line>.text-link{font-size:11px}}
-@media(max-width:1080px){:root{--header:80px}.main-nav{display:none}.header-cta{margin-left:auto}.menu-toggle{display:block}.hero{height:600px}.hero-content{width:350px;padding:29px 25px}.hero h1{font-size:36px}.section{padding-block:78px}.wrap{width:88%}.section-heading h2{font-size:29px}.section-heading>p{font-size:11px}.about-intro{gap:6%}.about-message{font-size:12px}.about-illustration{left:24%}.values{gap:5%}.values-copy p{font-size:10px}.teacher-grid,.voice-grid{gap:23px}.teacher-card h3{font-size:20px}.voice-card h3{font-size:14px}.school-grid{gap:28px}.school-info h3{font-size:22px}.faq-block{gap:40px}.footer-links{gap:12px 20px}.contact-line{flex-wrap:wrap}.contact-line>div{width:100%}}
+@media(max-width:1080px){:root{--header:80px}.main-nav{display:none}.header-cta{margin-left:auto}.menu-toggle{display:block}.hero{height:600px}.hero-content{width:350px;padding:29px 25px}.hero h1{font-size:36px}.section{padding-block:78px}.wrap{width:88%}.section-heading h2{font-size:29px}.section-heading>p{font-size:11px}.about-intro{gap:6%}.about-message{font-size:12px}.about-illustration{left:24%}.values{gap:5%}.values-copy p{font-size:10px}.voice-grid{gap:23px}.voice-card h3{font-size:14px}.school-grid{gap:28px}.school-info h3{font-size:22px}.faq-block{gap:40px}.footer-links{gap:12px 20px}.contact-line{flex-wrap:wrap}.contact-line>div{width:100%}}
 @media(max-width:767px){
  :root{--header:73px}
  body{font-size:13px}.wrap{width:88%}.section{padding-block:61px}
@@ -182,7 +194,7 @@ ul,ol{list-style:none;margin:0;padding:0}p{line-break:strict;text-wrap:pretty}
  .about-illustration{width:97px;left:auto;right:2%;bottom:-28px}.numbers-heading{margin-top:18px;margin-bottom:15px}.numbers-heading h3{font-size:14px}.numbers-heading>span{display:none}
  .numbers{padding:23px 0 22px}.numbers dt{font-size:9px;letter-spacing:0}.numbers dd{font-size:48px;margin-top:11px}.numbers dd small{font-size:10px;margin-inline:2px}.numbers-note{font-size:8px;margin-top:9px}
  .values{display:block;margin-top:36px}.values-photo{aspect-ratio:1.4}.values-photo img{border-bottom-right-radius:40px}.values-photo>span{left:13px;bottom:13px;font-size:9px;padding:5px 9px}.values-copy{margin-top:28px}.values-copy>h3{font-size:18px;margin-bottom:16px}.values-copy li{padding:18px 0;gap:14px}.values-copy h4{font-size:16px}.values-copy p{font-size:11px}
- .teacher-grid{gap:13px}.teacher-photo{aspect-ratio:.77}.teacher-card small{font-size:7px;letter-spacing:0;margin-top:13px;line-height:1.6}.teacher-card h3{font-size:15px;letter-spacing:0;display:block;margin-top:5px}.teacher-card .arrow{display:none}.teacher-card p{font-size:9px;line-height:1.8}
+
  .voice-grid{grid-template-columns:1fr;gap:29px}.voice-card{display:grid;grid-template-columns:38% 1fr;gap:17px}.voice-photo{aspect-ratio:.84}.voice-body{padding:0}.voice-class{font-size:9px;margin-bottom:7px}.voice-card h3{font-size:13px;line-height:1.9;letter-spacing:0}.voice-body>p:not(.voice-class){font-size:9px;margin-top:9px}.voice-body .text-link{margin-top:12px;font-size:9px;gap:10px}.voice-body .arrow{width:24px;height:22px}
  .school-grid{grid-template-columns:1fr;gap:36px}.school-photo{aspect-ratio:1.7}.school-info{padding-top:17px}.school-info h3{font-size:23px;margin-bottom:9px}.school-info p{font-size:11px}.school-info .school-hours{font-size:10px}.school-info .text-link{font-size:11px;margin-top:16px}.school-info .phone{font-size:12px}
  .visit-heading{display:block}.visit-heading h2{font-size:29px}.visit-heading>div+div{margin-top:21px}.visit-heading>div>p:not(.eyebrow){font-size:11px}.visit-heading .play-link{margin-top:12px}
@@ -192,7 +204,7 @@ ul,ol{list-style:none;margin:0;padding:0}p{line-break:strict;text-wrap:pretty}
  .site-footer{padding:39px 0 97px}.footer-top{display:block}.footer-brand{width:145px}.footer-caption{margin-top:16px;font-size:10px}.footer-links{grid-template-columns:1fr 1fr;margin-top:30px;gap:14px 19px;font-size:10px}.footer-bottom{display:block;margin-top:26px;padding-top:20px;font-size:8px}.footer-bottom>div{display:block}.footer-bottom a{display:block;margin-top:5px}.footer-bottom small{display:block;margin-top:12px;font-size:8px}
  .mobile-quicklinks{position:fixed;z-index:35;display:flex;inset-inline:0;bottom:0;min-height:53px;padding-bottom:env(safe-area-inset-bottom);background:var(--paper);border-top:1px solid #d4d8ce}.mobile-quicklinks a{flex:1;text-align:center;padding:14px 8px;font-size:11px}.mobile-quicklinks a:last-child{background:#355846;color:#fff}
 }
-@media(max-width:359px){.brand{width:95px}.site-header{gap:9px}.header-cta{font-size:9px;padding-inline:10px}.hero-content{margin-inline:5%}.hero h1{font-size:28px;letter-spacing:.02em}.hero-location{font-size:8px}.hero-lead{font-size:10px}.hero .play-link{font-size:10px;gap:16px}.pickup-heading h2{font-size:17px}.pickup-heading>.text-link{font-size:8px}.pickup-copy h3{font-size:11px}.pickup-art p{font-size:11px}.pickup-stamp{font-size:6px}.pickup-art,.pickup-image{min-height:95px}.course-info h3{font-size:14px}.course-info p:not(.course-age){font-size:9px}.numbers dd{font-size:42px}.numbers dt{font-size:8px}.about-intro h2{font-size:27px}.teacher-card h3{font-size:13px}.teacher-card p{font-size:8px}.voice-card{gap:12px}.voice-card h3{font-size:12px}.play-link{font-size:11px;gap:15px}.visit-heading h2{font-size:27px}}
+@media(max-width:359px){.brand{width:95px}.site-header{gap:9px}.header-cta{font-size:9px;padding-inline:10px}.hero-content{margin-inline:5%}.hero h1{font-size:28px;letter-spacing:.02em}.hero-location{font-size:8px}.hero-lead{font-size:10px}.hero .play-link{font-size:10px;gap:16px}.pickup-heading h2{font-size:17px}.pickup-heading>.text-link{font-size:8px}.pickup-copy h3{font-size:11px}.pickup-art p{font-size:11px}.pickup-stamp{font-size:6px}.pickup-art,.pickup-image{min-height:95px}.course-info h3{font-size:14px}.course-info p:not(.course-age){font-size:9px}.numbers dd{font-size:42px}.numbers dt{font-size:8px}.about-intro h2{font-size:27px}.voice-card{gap:12px}.voice-card h3{font-size:12px}.play-link{font-size:11px;gap:15px}.visit-heading h2{font-size:27px}}
 @media(max-width:359px){.faq-block img{width:80px;right:0}}
 .header-enhanced .mobile-quicklinks{opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .35s ease,transform .45s ease}
 .header-enhanced.header-visible .mobile-quicklinks,.header-enhanced .mobile-quicklinks:focus-within{opacity:1;transform:none;pointer-events:auto}
